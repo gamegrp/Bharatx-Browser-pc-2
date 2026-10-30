@@ -72,11 +72,11 @@ def smoke(payload: Path, report_file: Path) -> None:
         client.command('WebDriver:NewSession',{'capabilities':{'alwaysMatch':{'acceptInsecureCerts':False}}})
         client.command('Marionette:SetContext',{'value':'chrome'})
         while time.monotonic()<deadline:
-            result=client.script('return {name:Services.appinfo.name,vendor:Services.appinfo.vendor,loader:Services.prefs.getStringPref("nora.startup.loader",""),error:Services.prefs.getStringPref("nora.startup.error","")};')
+            result=client.script('return {mode:Services.prefs.getStringPref(\"nora.startup.mode\",\"\"),name:Services.appinfo.name,vendor:Services.appinfo.vendor,loader:Services.prefs.getStringPref("nora.startup.loader",""),error:Services.prefs.getStringPref("nora.startup.error","")};')
             if result['error']:raise RuntimeError('Feature startup failed: '+result['error'])
             if result['loader']=='loaded':break
             time.sleep(0.5)
-        if result['loader']!='loaded':raise RuntimeError('Production feature loader did not finish')
+        if result['loader']!='loaded':raise RuntimeError('Production feature loader did not finish: '+json.dumps(result))
         if result['name']!='BharatXBrowser' or result['vendor']!='Nitai Studio':
             raise RuntimeError('Native XRE identity was not overridden: '+json.dumps(result))
         report['identity']=result;report['checks'].append('native identity and production startup')
