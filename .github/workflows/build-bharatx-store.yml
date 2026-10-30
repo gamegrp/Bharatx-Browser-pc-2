@@ -136,6 +136,19 @@ jobs:
       - name: Compile launcher, test browser and pack Store upload
         shell: pwsh
         run: ./packaging/windows/Build-StorePackage.ps1 -Payload ./payload -OutputDirectory ./out
+      - name: Build EXE setup installer
+        shell: pwsh
+        run: |
+          choco install innosetup -y --no-progress
+          $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
+          if (!(Test-Path $iscc)) { throw 'Inno Setup compiler not found.' }
+          & $iscc "/DAppVersion=1.36.0" "/DPayloadDir=$((Resolve-Path ./payload).Path)" "/DOutputDir=$((Resolve-Path ./out).Path)" "/DRepoRoot=$((Resolve-Path .).Path)" ./packaging/windows/installer.iss
+          if ($LASTEXITCODE -ne 0) { throw 'Setup EXE build failed.' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BharatXBrowser-Setup-EXE-1.36.0-x64
+          path: out/BharatXBrowser-Setup-*.exe
+          if-no-files-found: error
       - uses: actions/upload-artifact@v4
         with:
           name: BharatXBrowser-Microsoft-Store-1.36.0.0-x64
