@@ -24,9 +24,17 @@ def prepare(runtime: Path) -> None:
     if actual != lock['source']['commit']: raise ValueError('Runtime source revision does not match the lock')
     if ROOT != runtime / 'noraneko':
         raise ValueError('Place this project in the runtime/noraneko directory before preparing')
+    upstream_names = set()
     for patch in sorted((runtime / '.github/patches/upstream').glob('*.patch')):
         git_apply(runtime, patch)
+        upstream_names.add(patch.name)
     for patch in sorted((ROOT / '.github/patches/floorp-runtime/common').glob('*.patch')):
+        # The pinned runtime already ships and applies a same-named patch
+        # (e.g. macos-app-shim-pwa-input-and-compositor.patch). Re-applying our
+        # older local copy conflicts with it, so the upstream one wins.
+        if patch.name in upstream_names:
+            print('Skipped (provided by pinned runtime):', patch.name)
+            continue
         git_apply(runtime, patch)
     icons = runtime / 'browser/components/shell/icons'
     icons.mkdir(parents=True, exist_ok=True)
