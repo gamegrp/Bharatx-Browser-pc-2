@@ -1,0 +1,8 @@
+packages:
+  - "libs/*"
+  - "browser-features/*"
+  - "bridge/*"
+
+onlyBuiltDependencies:
+  - "@swc/core"
+  - esbuild
