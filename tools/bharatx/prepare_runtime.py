@@ -61,7 +61,6 @@ def prepare(runtime: Path) -> None:
     (branding/'configure.sh').write_text('''# SPDX-License-Identifier: MPL-2.0
 MOZ_APP_DISPLAYNAME="BharatX Browser"
 MOZ_APP_NAME="floorp"
-MOZ_APP_VENDOR="Nitai Studio"
 MOZ_APP_REMOTINGNAME="bharatx-browser"
 ''')
     locale=branding/'locales/en-US';locale.mkdir(parents=True,exist_ok=True)
