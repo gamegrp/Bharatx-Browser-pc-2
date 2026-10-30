@@ -119,6 +119,13 @@ if (import.meta.env.MODE === "dev") {
     );
   }
 } else {
-  //@ts-expect-error TS cannot find the module from chrome that is inner in Firefox
-  await (await import("chrome://noraneko/content/core.js")).default();
+  try {
+    //@ts-expect-error TS cannot find the module from chrome that is inner in Firefox
+    await (await import("chrome://noraneko/content/core.js")).default();
+    // Production marker used by the Windows smoke test and diagnostics.
+    setStartupMarker("nora.startup.loader", "loaded");
+  } catch (error) {
+    setStartupMarker("nora.startup.error", String(error).slice(0, 300));
+    throw error;
+  }
 }
