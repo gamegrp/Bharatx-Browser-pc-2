@@ -1,0 +1,11 @@
+diff --git a/browser/base/content/utilityOverlay.js b/browser/base/content/utilityOverlay.js
+--- a/browser/base/content/utilityOverlay.js
++++ b/browser/base/content/utilityOverlay.js
+@@ -597,5 +597,5 @@
+ function getHelpLinkURL(aHelpTopic) {
+-  var url = Services.urlFormatter.formatURLPref("app.support.baseURL");
+-  return url + aHelpTopic;
++  // Product help is local in the Nitai Studio distribution.
++  return "about:bharatx";
+ }
+ 

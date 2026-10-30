@@ -1,0 +1,12 @@
+/* Hover animation never changes panel or content geometry. */
+:root[floorp-firefox-sidebar-overlay][floorp-firefox-sidebar-hover] #sidebar-box {
+  opacity: 0;
+}
+:root[floorp-firefox-sidebar-overlay][floorp-firefox-sidebar-hover] #sidebar-box[data-floorp-sidebar-expanded] {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root[floorp-firefox-sidebar-overlay][floorp-firefox-sidebar-hover] #sidebar-box {
+    transition: opacity 140ms ease !important;
+  }
+}

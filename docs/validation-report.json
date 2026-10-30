@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checks": [
+    "Partner Center identity and increasing four-part version",
+    "Manifest identity, Windows Desktop, browser associations and logo paths",
+    "All localized display values preserve keys and use BharatX branding",
+    "Offline About, Privacy and Disclaimer; only developer website and support links",
+    "No built-in TSX navigation links to upstream product or code-hosting pages",
+    "Browser HTML titles use the product name",
+    "Upstream update feed, remote experiments and HTTP developer loader disabled",
+    "Pinned resource editor and retained third-party license",
+    "Preserved MPL/attribution and one Store build workflow with native smoke test"
+  ],
+  "sourceVersion": "1.36.0",
+  "storeVersion": "1.36.0.0",
+  "windowsBuildExecuted": false,
+  "limitation": "Dependency downloads are restricted in the editing environment; run the workflow to build, execute and validate the Windows application.",
+  "additionalChecks": {
+    "changedTypeScriptJsonYamlFilesParsed": 207,
+    "pythonScriptsCompile": true,
+    "workflowYamlParses": true,
+    "nativeArtifactSha256": "3843ff41659fde3e764d78443bc0c454ec98ee056ff368088d1bcc24b5ace209",
+    "realNativeLayoutBrandingTransformTested": true,
+    "originalMplLicenseByteIdentical": true,
+    "originalChangedSourceLicenseHeadersRetained": true,
+    "fullFrontendBuild": false,
+    "windowsExecution": false,
+    "makeappxValidation": false,
+    "htmlBrowserRender": false,
+    "htmlBrowserRenderReason": "A local browser was not installed; the requested browser download did not produce a valid browser archive.",
+    "storeSubmission": false,
+    "websiteDeployment": false,
+    "nativeHelpPatchApplied": true
+  }
+}

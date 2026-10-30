@@ -1,0 +1,487 @@
+{
+  "setupRich": {
+    "selected": "Sélectionné",
+    "languageActive": "Utilisé pour les menus et les réglages",
+    "palettePreview": "Aperçu en couleur",
+    "searchDestination": "Moteur de recherche de la barre d'adresse",
+    "enlarge": "Agrandir la capture d'écran de « {{feature}}»",
+    "enlargeShort": "Afficher en plus grand",
+    "closePreview": "Fermer l'aperçu",
+    "actualScreenshot": "Une capture d'écran réelle de BharatX Browser. L'apparence peut varier en fonction de votre version et de vos paramètres."
+  },
+  "setupV5": {
+    "back": "Précédent",
+    "supportLabels": {
+      "disabled": "Privacy information reviewed",
+      "blocking": "Privacy information reviewed",
+      "support": "Privacy information reviewed"
+    },
+    "supportNotice": "Read the policies and contact support if you need assistance.",
+    "steps": [
+      "Bienvenue",
+      "Langue",
+      "Fonctionnalités ",
+      "BharatX Browser Hub",
+      "Paramètres",
+      "Privacy and support",
+      "Terminer"
+    ],
+    "pages": [
+      {
+        "title": "Bienvenue\nsur BharatX Browser.",
+        "description": "Adaptez votre navigateur à votre façon de travailler.",
+        "hint": "Ce guide présente les fonctionnalités et vous aide à définir vos premiers paramètres."
+      },
+      {
+        "title": "Commencez par la langue\nque vous connaissez le mieux.",
+        "description": "Vérifiez la langue d'affichage de BharatX Browser et modifiez-la si nécessaire.",
+        "hint": "La langue que vous avez choisie s'applique immédiatement."
+      },
+      {
+        "title": "Découvrez ce que\nBharatX Browser peut faire.",
+        "description": "Séparez vos tâches, affichez les pages côte à côte et travaillez plus rapidement. Découvrez les fonctionnalités qui vous intéressent.",
+        "hint": "Vous pourrez modifier ces paramètres ultérieurement dans la section « Paramètres »."
+      },
+      {
+        "title": "Vos paramètres,\ndans BharatX Browser Hub.",
+        "description": "Ajustez les fonctionnalités spécifiques à BharatX Browser dans un seul endroit.",
+        "hint": "Vous pouvez l'ouvrir à tout moment après l'installation."
+      },
+      {
+        "title": "Faites de l'apparence\net de la recherche la vôtre.",
+        "description": "Choisissez le thème et le moteur de recherche que vous utilisez au quotidien.",
+        "hint": "Vous pouvez les modifier plus tard dans BharatX Browser Hub ou dans les paramètres Firefox."
+      },
+      {
+        "title": "Your privacy,\nyour choices.",
+        "description": "Review the local Privacy Policy and Disclaimer, and find Nitai Studio support.",
+        "hint": "Updates for this edition are available through Microsoft Store."
+      },
+      {
+        "title": "Vous êtes prêt\nà naviguer.",
+        "description": "Passez en revue vos choix et commencez à naviguer.",
+        "hint": "Vous pourrez toujours modifier vos paramètres ultérieurement."
+      }
+    ],
+    "startTitle": "Avant de commencer",
+    "startItems": [
+      {
+        "title": "Vérifiez votre langue d'affichage",
+        "description": "Commencez par la langue que vous utilisez au quotidien."
+      },
+      {
+        "title": "Choisissez les paramètres qui vous conviennent",
+        "description": "Choisissez votre thème et votre moteur de recherche."
+      },
+      {
+        "title": "Soyez prêt à naviguer",
+        "description": "Vérifiez vos choix avant de commencer."
+      }
+    ],
+    "changeLater": "Vous pouvez modifier ces réglages plus tard.",
+    "languageTitle": "Langue d'affichage",
+    "languageLabel": "Langue d'affichage de BharatX Browser",
+    "languageHint": "Utilisé pour les menus et les réglages.",
+    "languageNotice": "Il se peut que certaines extensions ne prennent pas en charge le changement de langue.",
+    "languageCurrent": "{{language}} utilisé",
+    "featuresTitle": "Explorer les fonctionnalités",
+    "hubTitle": "Trouvez ce que vous voulez ajuster",
+    "hubItems": [
+      {
+        "title": "Onglet & Apparence",
+        "description": "Disposition des onglets et apparence du navigateur"
+      },
+      {
+        "title": "Espaces de travail",
+        "description": "Basculer entre les tâches et organiser les onglets"
+      },
+      {
+        "title": "Gestes de la souris",
+        "description": "Raccourcis vers les actions fréquemment utilisées"
+      }
+    ],
+    "openHub": "Ouvrir la Plateforme de BharatX Browser",
+    "openPreferences": "Open Browser Settings",
+    "newTab": "S'ouvre dans un nouvel onglet.",
+    "hubAddress": "Vous pouvez également saisir about:hub dans la barre d'adresse.",
+    "customizeTitle": "Vos premiers réglages",
+    "searchHint": "Utilisé lors de la recherche dans la barre d'adresse.",
+    "supportTitle": "Privacy and support",
+    "scopeTitle": "Privacy information",
+    "summaryTitle": "Vérifiez vos paramètres",
+    "change": "Modifier",
+    "defaultTitle": "Faites de BharatX Browser votre navigateur de tous les jours",
+    "defaultHint": "Définir les liens à ouvrir dans BharatX Browser.",
+    "getStarted": "Commencer à utiliser BharatX Browser",
+    "finishNotice": "Start browsing to finish setup and save your settings."
+  },
+  "releaseNotes": {
+    "prompt": {
+      "title": "Un nouveau choix.\nSoutenez ce qui va suivre.",
+      "description": "Les recettes publicitaires financent le développement et l'exploitation de BharatX Browser. Vous pouvez désormais choisir le mode d'affichage des notes de mise à jour et comment les bloqueurs fonctionnent sur le blog de BharatX Browser.",
+      "hint": "Vos paramètres restent inchangés jusqu'à ce que vous enregistriez une sélection. Vous pourrez les modifier ultérieurement dans la section « Mises à jour et expérimentations ».",
+      "choiceTitle": "Choisissez le mode d'ouverture des notes de mise à jour",
+      "choiceDescription": "Choisissez l'affichage automatique après les mises à jour et comment vos bloqueurs fonctionnent sur le blog BharatX Browser.",
+      "dismiss": "Pas maintenant"
+    },
+    "learnMore": "En savoir plus sur notre financement et ce réglage (japonais)",
+    "title": "Notes de version et support BharatX Browser",
+    "description": "Les recettes publicitaires financent le développement et l'exploitation de BharatX Browser. Choisissez comment afficher les notes de version après les mises à jour. Vous pourrez modifier ce paramètre ultérieurement dans Paramètres → Mises à jour et expérimentations.",
+    "disabled": {
+      "label": "Ne pas ouvrir automatiquement",
+      "description": "N'ouvrez pas les notes de version après les mises à jour. Conservez vos paramètres de blocage lorsque vous consultez le blog."
+    },
+    "blocking": {
+      "label": "Ouvrir avec vos paramètres de blocage",
+      "description": "Gardez vos extensions fonctionnelles comme configurées. Cela n'installe pas ou n'active pas un bloqueur de publicité."
+    },
+    "support": {
+      "label": "Autoriser les publicités pour soutenir BharatX Browser (recommandé)",
+      "description": "Restreindre uBlock Origin, AdGuard, Adblock Plus, AdBlock et Ghostery sur le blog BharatX Browser."
+    },
+    "scope": "Cette restriction s'applique à toutes les pages HTTPS du site the browser developer website, y compris celles ouvertes manuellement, et concerne la protection contre le suivi, les filtres personnalisés ainsi que le blocage des publicités. Les autres extensions ne sont pas restreintes par ce réglage. Les publicités peuvent toujours être bloquées par d'autres outils de protection. Veuillez actualiser les pages du blog ouvertes après avoir modifié ce réglage.",
+    "currentSetting": "Réglage actuel : {{mode}}",
+    "applyOnConfirm": "Votre choix ne sera effectif qu'une fois que vous l'aurez confirmé. Si vous fermez cette page, votre paramètre actuel sera conservé.",
+    "changeSelection": "Changer la sélection",
+    "applyOnFinish": "Il s'agit d'un choix provisoire. Il prendra effet lorsque vous aurez terminé la configuration sur l'écran suivant. Si vous fermez la fenêtre de configuration avant cela, vos paramètres actuels seront alors conservés.",
+    "confirm": "Enregistrer la sélection",
+    "dismiss": "Conserver les paramètres actuels",
+    "error": "Impossible de charger ou d'enregistrer votre sélection. Veuillez rouvrir cette page et réessayer."
+  },
+  "navigation": {
+    "support": "Support de BharatX Browser",
+    "welcome": "Bienvenue",
+    "language": "Langue",
+    "languageSupport": "Prise en charge de la langue",
+    "features": "Fonctionnalités ",
+    "featureIntroduction": "Présentation des fonctionnalités.",
+    "hub": "BharatX Browser Hub",
+    "hubIntro": "À propos de BharatX Browser Hub",
+    "customize": "Personnaliser",
+    "initialSettings": "Paramètres initiaux",
+    "complete": "Terminer",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "hubPage": {
+    "title": "À propos de BharatX Browser Hub",
+    "subtitle": "Un endroit central pour les paramètres spécifiques à BharatX Browser.",
+    "sectionTitle": "BharatX Browser Hub",
+    "description": "BharatX Browser Hub est un centre de paramétrage dédié aux options spécifiques à BharatX Browser. Vous pouvez l'ouvrir en naviguant vers 'about:hub'. Il est également accessible depuis la barre latérale gauche de la page des paramètres de Firefox à 'about:preferences'.",
+    "openHub": "Ouvrir about:hub",
+    "openPreferences": "Ouvrir les paramètres (about:preferences)",
+    "tip": "Astuce : Vous pouvez également accéder à BharatX Browser Hub à partir de la barre latérale des paramètres de Firefox.",
+    "features": {
+      "dedicated": "Centre de paramétrage dédié à BharatX Browser",
+      "accessible": "Accessible à partir de about:hub ou des paramètres de Firefox",
+      "centralized": "Toutes les options spécifiques à BharatX Browser en un seul endroit"
+    }
+  },
+  "customize": {
+    "title": "Personnaliser BharatX Browser",
+    "description": "Personnalisez vos paramètres préférés. Vous pourrez toujours les modifier plus tard à partir du BharatX Browser Hub ou de la page des paramètres.",
+    "appearance": {
+      "title": "Réglages de l'apparence",
+      "description": "Vous pouvez personnaliser l'apparence de BharatX Browser selon vos préférences. Choisissez un thème clair ou foncé, ou faites-le basculer automatiquement en fonction des paramètres de votre système."
+    },
+    "themes": {
+      "light": "Clair",
+      "dark": "Sombre",
+      "system": "Suivre les paramètres du système"
+    },
+    "themeInfo": {
+      "light": "Thème clair",
+      "dark": "Thème sombre",
+      "system": "Préférence système"
+    },
+    "searchEngine": {
+      "title": "Moteur de recherche par défaut",
+      "default": "Par défaut",
+      "search": "Recherche",
+      "noEnginesFound": "Aucun moteur de recherche n'a été trouvé."
+    },
+    "floorpHub": {
+      "title": "Hub BharatX Browser",
+      "description": "BharatX Browser Hub est un centre de paramétrage dédié aux options spécifiques à BharatX Browser. Vous pouvez l'ouvrir en naviguant vers 'about:hub'. Il est également accessible depuis la barre latérale gauche de la page des paramètres de Firefox à 'about:preferences'.",
+      "openHub": "Ouvrir about:hub",
+      "openPreferences": "Ouvrir les Paramètres (about:preferences)"
+    }
+  },
+  "finish": {
+    "title": "Configuration terminée !",
+    "subtitle": "Félicitations ! Vous avez terminé l'installation de BharatX Browser. Profitez d'une expérience de navigation confortable et sécurisée.",
+    "nextSteps": {
+      "title": "Étapes suivantes (facultatif)",
+      "setDefault": "Définir comme navigateur par défaut",
+      "documentation": "Documentation"
+    },
+    "getStarted": "Démarrer avec BharatX Browser",
+    "hint": "Pour des réglages plus détaillés, vous pouvez personnaliser via l'option Paramètres dans le bouton de menu en haut à droite."
+  },
+  "setupGuide": {
+    "welcome": "Bienvenue sur BharatX Browser.",
+    "description": "Adaptez votre navigateur à votre façon de travailler.",
+    "introduction": "Ce guide présente les fonctionnalités de BharatX Browser et vous aide à définir vos premiers paramètres.",
+    "start": "Démarrer la configuration",
+    "next": "Ensuite, vérifiez votre langue d'affichage.",
+    "progress": "Configuration {{current}} / {{total}}",
+    "title": "Ce que couvre ce tutoriel",
+    "subtitle": "Explorez les fonctionnalités et choisissez les paramètres qui vous conviennent.",
+    "discover": {
+      "title": "Découvrez les fonctionnalités de BharatX Browser",
+      "description": "Explorez les moyens d'organiser les onglets et de personnaliser votre navigateur."
+    },
+    "personalize": {
+      "title": "Choisissez vos paramètres",
+      "description": "Ajustez l'apparence et les contrôles à vos préférences."
+    },
+    "finish": {
+      "title": "Préparez-vous à naviguer",
+      "description": "Passez en revue vos choix et commencez à naviguer."
+    }
+  },
+  "welcomePage": {
+    "welcome": "Bienvenue à BharatX Browser !",
+    "description": "BharatX Browser est un navigateur web rapide et convivial qui met l'accent sur la confidentialité et la sécurité. Ce guide vous présentera les principales fonctions et paramètres de BharatX Browser.",
+    "readyToStart": "Lorsque vous êtes prêt, cliquez sur le bouton ci-dessous pour continuer.",
+    "features": "Fonctionnalités du BharatX Browser",
+    "privacy": "Confidentialité",
+    "privacyDesc": "Protège vos données",
+    "speed": "Vitesse",
+    "speedDesc": "Des performances optimisées",
+    "customization": "Personnalisation",
+    "customizationDesc": "Organiser à votre convenance",
+    "start": "Commencer"
+  },
+  "localizationPage": {
+    "title": "BharatX Browser parle votre langue",
+    "subtitle": "Vérifiez les paramètres de langue et modifiez-les si nécessaire",
+    "languageSettings": "Paramètres linguistiques",
+    "languageChanged": "Langue modifiée !",
+    "currentLanguageInfo": "Informations sur les langues actuelles",
+    "systemLanguage": "Langue du système",
+    "floorpLanguage": "Langue de BharatX Browser",
+    "selectLanguage": "Sélectionner la langue",
+    "useSystemLanguage": "Utiliser la langue du système",
+    "multilingual": "Prise en charge multilingue",
+    "chooseLanguage": "Choisissez parmi un large éventail de langues",
+    "languageChangeNotice": "Changer de langue appliquera la nouvelle langue sans redémarrer BharatX Browser. Certains modules complémentaires peuvent ne pas prendre en charge les changements de langue."
+  },
+  "featuresPage": {
+    "title": "Fonctionnalités principales de BharatX Browser",
+    "subtitle": "BharatX Browser est doté de nombreuses fonctionnalités utiles. Consultez l'aperçu des fonctionnalités !",
+    "panelSidebar": {
+      "title": "Barre latérale",
+      "description": "Accédez à des fonctions pratiques à partir de la barre latérale de droite lorsque vous naviguez. Vous pouvez placer des panneaux web, des fonctions de prise de notes, des modules complémentaires, des signets, etc. dans la barre latérale.",
+      "features": [
+        "Épingler des sites web dans la barre latérale",
+        "Prendre rapidement des notes avec BharatX Browser Notes tout en naviguant",
+        "Prise en charge des conteneurs"
+      ]
+    },
+    "workspaces": {
+      "title": "Espaces de travail",
+      "description": "Organisez plusieurs jeux d'onglets pour rationaliser votre travail. Passez rapidement d'un espace de travail à l'autre grâce à des icônes et des noms distinctifs. Accès par le bouton de l'espace de travail en haut à gauche.",
+      "features": [
+        "Classer par usage : travail, personnel, etc.",
+        "Identifier visuellement avec des icônes personnalisées",
+        "Gérer facilement les onglets"
+      ]
+    },
+    "pwa": {
+      "title": "Prise en charge des applications Web",
+      "description": "Sous Windows, vous pouvez ajouter des sites compatibles PWA en tant qu'applications de bureau lorsque vous les visitez. Les sites web ordinaires peuvent également être installés.",
+      "features": [
+        "Exécuter indépendamment en tant qu'applications de bureau",
+        "Peut être épinglé à la barre des tâches",
+        "Les modules complémentaires de Firefox fonctionnent également"
+      ]
+    },
+    "mouseGesture": {
+      "title": "Gestes de la souris",
+      "description": "Contrôlez votre navigateur de manière plus intuitive grâce à la fonctionnalité des gestes de la souris implémentée en mode natif. Exécutez des gestes en maintenant le bouton du clic droit enfoncé et en déplaçant votre souris.",
+      "features": [
+        "Fonctionne sans raccourcis clavier",
+        "Gestes entièrement personnalisables",
+        "Naviguer rapidement dans les pages et l'historique"
+      ]
+    },
+    "notebook": "Carnet de notes",
+    "nextTab": "Aller à l'onglet suivant"
+  },
+  "finishPage": {
+    "title": "Configuration terminée !",
+    "subtitle": "Félicitations ! Vous avez terminé la configuration de BharatX Browser. Vous pouvez maintenant profiter d'une navigation Internet confortable et sécurisée.",
+    "nextSteps": "Étapes suivantes (facultatif)",
+    "defaultBrowser": "Définir comme navigateur par défaut",
+    "support": "Support",
+    "documentation": "Documentation",
+    "getStarted": "Démarrer avec BharatX Browser",
+    "hint": "Pour des réglages plus détaillés, vous pouvez personnaliser via l'option Paramètres dans le bouton de menu en haut à droite.",
+    "resourcesLabel": "Ressources",
+    "defaultBrowserSuccess": "BharatX Browser a été défini comme votre navigateur par défaut !"
+  },
+  "whatsNew": {
+    "title": "Bienvenue sur BharatX Browser {{version}}!",
+    "subtitle": "Découvrez les nouveautés de BharatX Browser !",
+    "tags": {
+      "settings": "Paramètres",
+      "productivity": "Productivité",
+      "workspaces": "Espaces de travail",
+      "pwa": "PWA",
+      "gestures": "Gestes"
+    },
+    "footer": {
+      "follow": "Suivre",
+      "terms": "Conditions d'utilisation",
+      "privacy": "Politique de confidentialité",
+      "about": "À propos de BharatX Browser",
+      "copyright": "© {{year}} BharatX Browser Projects. Tous droits réservés."
+    }
+  },
+  "ui": {
+    "retry": "Réessayer",
+    "loadError": "Impossible de charger ces paramètres. Veuillez réessayer.",
+    "skipToContent": "Passer directement au contenu",
+    "loading": "Chargement…",
+    "setupProgress": "Progression de l'installation",
+    "stepNavigation": "Configuration de la navigation",
+    "settingsNavigation": "Réglages de navigation",
+    "openNavigation": "Ouvrir la navigation",
+    "closeNavigation": "Fermer la navigation",
+    "saveError": "Échec de l'enregistrement. Veuillez réessayer."
+  },
+  "featureDemo": {
+    "label": "Démonstration interactive",
+    "close": "Fermer le panneau",
+    "cancel": "Annuler",
+    "reset": "Réinitialiser la démo",
+    "play": "Regarder le geste",
+    "replay": "Regarder à nouveau",
+    "workspaces": {
+      "title": "Basculer d'espaces de travail",
+      "instruction": "Cliquez sur le bouton « Espace de travail » situé en haut à gauche, puis sélectionnez un espace de travail.",
+      "names": [
+        "Travail",
+        "Personnel",
+        "Apprentissage"
+      ],
+      "tabs": [
+        [
+          "Projet",
+          "Mail",
+          "Calendrier"
+        ],
+        [
+          "Voyage",
+          "Recettes",
+          "Musique"
+        ],
+        [
+          "Notes",
+          "Dictionnaire",
+          "Ressources"
+        ]
+      ],
+      "result": "Affichage des onglets pour {{name}}.",
+      "benefit": "Basculer entre votre travail et vos onglets personnels en tant que groupe.",
+      "guideOpen": "Cliquez sur le bouton « Travail ».",
+      "guideSelect": "Sélectionnez Personnel.",
+      "guideDone": "Les onglets ci-dessus ont basculé ensemble.",
+      "openHint": "1 Ouvrir ici",
+      "selectHint": "2 Choisissez Personnel",
+      "pages": [
+        {
+          "category": "Travail d'équipe",
+          "title": "Le projet de cette semaine",
+          "description": "Gardez les tâches et les progressions ensembles.",
+          "items": [
+            "Rassembler des idées pour le projet",
+            "Vérifier la conception",
+            "Préparez-vous pour la prochaine réunion"
+          ]
+        },
+        {
+          "category": "Plans du week-end",
+          "title": "Où aller ensuite?",
+          "description": "Enregistrez vos endroits préférés et organisez votre prochain voyage.",
+          "items": [
+            "Trouver un café au bord de mer",
+            "Explorer une nouvelle ville",
+            "Créer une liste d'emballage"
+          ]
+        },
+        {
+          "category": "Notes d'étude",
+          "title": "Notes d'apprentissage du jour",
+          "description": "Reformulez ce que vous avez appris avec vos propres mots.",
+          "items": [
+            "Résumez les points essentiels",
+            "Notez les nouveaux mots",
+            "Liste des questions à approfondir par la suite"
+          ]
+        }
+      ]
+    },
+    "panelSidebar": {
+      "title": "Ouvrir un site à côté de votre page",
+      "instruction": "Utilisez l'icône de musique à droite pour ouvrir ou fermer le site enregistré.",
+      "article": "Continuez à explorer",
+      "music": "Musique",
+      "favorites": "Favoris",
+      "tracks": [
+        "Au clair de lune",
+        "Heure bleue",
+        "Légère brise"
+      ],
+      "play": "Essayer la lecture (sans audio)",
+      "stop": "Arrêter la lecture",
+      "toggle": "Afficher/masquer le panneau Musique",
+      "open": "Votre page et le site enregistré s'affichent côte à côte.",
+      "closed": "Ouvrez à nouveau le panneau en utilisant l'icône de la musique sur la droite.",
+      "benefit": "Ouvrez un autre site à côté de la page que vous consultez."
+    },
+    "pwa": {
+      "title": "Transformez un site favori en une application",
+      "instruction": "Essayez de l'installer à partir de l'icône située sur la droite de la barre d'adresse.",
+      "icon": "Ouvrir le menu d'installation de l'application web",
+      "open": "Ouvrir l’application",
+      "install": "Installer l'application",
+      "calendar": "Calendrier",
+      "result": "Exemple de fenêtre d'application autonome",
+      "benefit": "Ouvrir un site en tant qu'application dans une fenêtre séparée.",
+      "tab": "Applications Web"
+    },
+    "mouseGesture": {
+      "title": "Naviguer à l'aide d'un geste de souris",
+      "steps": [
+        "Maintenez le bouton droit enfoncé",
+        "Déplacer à gauche",
+        "Relâchez le bouton"
+      ],
+      "previous": "Page précédente",
+      "current": "Page actuelle",
+      "result": "← Retour à la page précédente (démo)",
+      "hint": "Exemple du geste « Retour » par défaut.",
+      "enable": "Activez les gestes de la souris dans les Paramètres pour utiliser cette fonctionnalité.",
+      "benefit": "Maintenez le bouton droit de la souris enfoncé et déplacez la souris pour effectuer des actions telles que « Retour »."
+    }
+  },
+  "welcomeMotion": {
+    "steps": [
+      "Vérifier la langue",
+      "Choisir l'apparence",
+      "C'est parti"
+    ],
+    "descriptions": [
+      "Vérifiez votre langue d'affichage préférée.",
+      "Choisissez un thème et un moteur de recherche.",
+      "Passez en revue vos choix et commencez à naviguer."
+    ],
+    "replay": "Regarder à nouveau"
+  },
+  "demoPlayback": {
+    "pause": "Pause",
+    "play": "Lecture / reprise"
+  }
+}

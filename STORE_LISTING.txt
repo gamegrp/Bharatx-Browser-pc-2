@@ -1,0 +1,34 @@
+BharatX Browser
+
+Short description
+A desktop browser with workspaces, flexible tabs, bookmarks and privacy controls. Developed by Nitaistudio. Made in India.
+
+Description
+Browse the web with BharatX Browser by Nitai Studio. Organize tabs into workspaces, manage bookmarks and downloads, customize your browsing layout and use supported browser extensions. Built-in settings provide control over site permissions and browser data.
+
+Find support, the Privacy Policy and Disclaimer directly inside About. The Microsoft Store edition receives updates through Microsoft Store.
+
+Developed by Nitaistudio. Made in India.
+Support: nitai.grp00@gmail.com
+Website: https://www.trishabonlineservice.in/?m=1
+
+What's new in 1.36.0
+BharatX branding and supplied icon; updated About and support details; offline privacy and disclaimer pages; revised Windows Store packaging.
+
+Keywords
+browser
+web browser
+workspaces
+tabs
+bookmarks
+desktop browsing
+BharatX
+
+Copyright
+2026 Nitai Studio. Third-party components retain their copyrights and licenses.
+
+Additional license terms
+Third-party open-source components remain governed by their respective licenses. Applicable notices and source-code availability information are included in the app. Nothing in these terms restricts rights granted by those licenses or mandatory consumer rights.
+
+Privacy policy URL
+Publish the supplied publish-website/privacy-policy.html on your own website and enter its actual public URL. Do not enter an unverified or local browser URL.

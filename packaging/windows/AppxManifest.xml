@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap rescap">
+  <Identity Name="NitaiStudio.BharatXBrowser" Publisher="CN=BEDDC7D9-ACD5-4D93-AEC9-C98C64F43592" Version="1.36.0.0" ProcessorArchitecture="x64" />
+  <Properties>
+    <DisplayName>BharatX Browser</DisplayName>
+    <PublisherDisplayName>Nitai Studio</PublisherDisplayName>
+    <Description>BharatX Browser. Developed by Nitaistudio. Made in India.</Description>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+  <Resources><Resource Language="en-US" /></Resources>
+  <Applications>
+    <Application Id="BharatXBrowser" Executable="BharatXBrowser.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements DisplayName="BharatX Browser" Description="BharatX Browser by Nitai Studio" BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="http"><uap:Logo>Assets\Square44x44Logo.png</uap:Logo><uap:DisplayName>BharatX Browser</uap:DisplayName></uap:Protocol>
+        </uap:Extension>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="https"><uap:Logo>Assets\Square44x44Logo.png</uap:Logo><uap:DisplayName>BharatX Browser</uap:DisplayName></uap:Protocol>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="bharatxhtml">
+            <uap:DisplayName>BharatX HTML document</uap:DisplayName>
+            <uap:Logo>Assets\Square44x44Logo.png</uap:Logo>
+            <uap:SupportedFileTypes><uap:FileType>.htm</uap:FileType><uap:FileType>.html</uap:FileType><uap:FileType>.xhtml</uap:FileType></uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities><Capability Name="internetClient" /><rescap:Capability Name="runFullTrust" /></Capabilities>
+</Package>

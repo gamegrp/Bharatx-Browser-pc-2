@@ -1,0 +1,4 @@
+/* An ordinary open sidebar remains visible when hover control is disabled. */
+:root[floorp-firefox-sidebar-overlay]:not([floorp-firefox-sidebar-hover]) #sidebar-box {
+  pointer-events: auto;
+}

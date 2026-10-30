@@ -1,0 +1,13 @@
+{
+  "name": "NitaiStudio.BharatXBrowser",
+  "publisher": "CN=BEDDC7D9-ACD5-4D93-AEC9-C98C64F43592",
+  "publisherDisplayName": "Nitai Studio",
+  "displayName": "BharatX Browser",
+  "version": "1.36.0.0",
+  "previousVersion": "1.35.7.0",
+  "architecture": "x64",
+  "storeId": "9N0F482K1PVK",
+  "minimumWindowsVersion": "10.0.17763.0",
+  "supportEmail": "nitai.grp00@gmail.com",
+  "website": "https://www.trishabonlineservice.in/?m=1"
+}

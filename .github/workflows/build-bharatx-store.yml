@@ -1,0 +1,148 @@
+name: Build BharatX Browser for Microsoft Store
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore: ["docs/**", "**/*.md", "publish-website/**"]
+permissions:
+  contents: read
+concurrency:
+  group: bharatx-store-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    name: Build Windows x64 browser and matching source
+    runs-on: ubuntu-22.04
+    timeout-minutes: 180
+    env:
+      CANON_PLATFORM: Windows-x86_64
+      MOZBUILD_STATE_PATH: ${{ github.workspace }}/mozbuild-state
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate source identity and policy pages
+        run: python source/tools/bharatx/audit.py
+      - name: Read pinned native source revision
+        id: runtime
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          source = json.loads(Path('source/floorp-runtime.lock.json').read_text())['source']
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as stream:
+              stream.write('repository=' + source['repository'] + '\n')
+              stream.write('commit=' + source['commit'] + '\n')
+          PY
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ steps.runtime.outputs.repository }}
+          ref: ${{ steps.runtime.outputs.commit }}
+          path: runtime
+          submodules: recursive
+          persist-credentials: false
+      - name: Place browser feature source in runtime tree
+        run: cp -a source runtime/noraneko
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: "2.5.4"
+      - name: Install frontend dependencies
+        working-directory: runtime/noraneko
+        run: deno install --allow-scripts
+      - name: Apply pinned source patches and product branding
+        run: python runtime/noraneko/tools/bharatx/prepare_runtime.py runtime
+      - name: Bootstrap artifact build tools
+        working-directory: runtime
+        run: ./mach --no-interactive bootstrap --application-choice browser_artifact_mode
+      - name: Fetch and verify native artifact
+        run: python runtime/noraneko/tools/bharatx/fetch_runtime.py native-artifact.zip
+      - name: Build production frontend
+        working-directory: runtime/noraneko
+        env:
+          NODE_ENV: production
+        run: deno task feles-build build --phase before-mach
+      - name: Build Gecko artifact layout
+        working-directory: runtime
+        shell: bash
+        run: |
+          ./mach configure
+          MOZ_ARTIFACT_FILE="$GITHUB_WORKSPACE/native-artifact.zip" ./mach build
+      - name: Inject production startup and compatibility patches
+        working-directory: runtime/noraneko
+        shell: bash
+        run: |
+          deno task feles-build build --phase after-mach
+          python tools/bharatx/finalize_artifact.py ../obj-artifact-build-output/dist/bin
+      - name: Prepare Store payload
+        run: python runtime/noraneko/tools/bharatx/prepare_payload.py runtime/obj-artifact-build-output/dist/bin payload
+      - name: Archive Windows payload
+        run: tar -czf windows-payload.tar.gz -C payload .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-payload-1.36.0
+          path: windows-payload.tar.gz
+          compression-level: 0
+          if-no-files-found: error
+      - name: Archive matching covered source
+        shell: bash
+        run: |
+          tar --exclude='.git' --exclude='node_modules' --exclude='_dist' \
+            --exclude='obj-artifact-build-output' --exclude='__pycache__' \
+            --exclude='link-features-chrome' --exclude='link-modules' --exclude='link-i18n' \
+            -czf BharatXBrowser-MPL-Source-1.36.0.tar.gz -C runtime .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BharatXBrowser-MPL-Source-1.36.0
+          path: BharatXBrowser-MPL-Source-1.36.0.tar.gz
+          retention-days: 90
+          compression-level: 0
+          if-no-files-found: error
+  package:
+    name: Run Windows smoke tests and create MSIX
+    needs: build
+    runs-on: windows-2022
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          name: windows-payload-1.36.0
+          path: build-input
+      - name: Extract payload
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force payload | Out-Null
+          tar -xzf build-input/windows-payload.tar.gz -C payload
+          if ($LASTEXITCODE -ne 0) { throw 'Payload extraction failed.' }
+      - name: Compile launcher, test browser and pack Store upload
+        shell: pwsh
+        run: ./packaging/windows/Build-StorePackage.ps1 -Payload ./payload -OutputDirectory ./out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BharatXBrowser-Microsoft-Store-1.36.0.0-x64
+          path: |
+            out/*.msix
+            out/*.msixupload
+            out/SHA256SUMS.txt
+            out/smoke-report.json
+          if-no-files-found: error
+      - name: Preserve diagnostic report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: BharatXBrowser-Windows-diagnostics
+          path: out/smoke-report.json
+          if-no-files-found: ignore
