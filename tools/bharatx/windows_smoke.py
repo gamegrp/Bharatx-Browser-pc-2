@@ -3,6 +3,7 @@
 No existing user profile is opened or modified. Used by the Store packaging job.
 """
 # SPDX-License-Identifier: MPL-2.0
+import os
 import json
 from pathlib import Path
 import socket
@@ -60,7 +61,8 @@ def smoke(payload: Path, report_file: Path) -> None:
             'floorp.releaseNotes.mode':'disabled','floorp.releaseNotes.choiceConfirmed':True}
         (profile/'user.js').write_text(''.join(f'user_pref({json.dumps(k)},{json.dumps(v)});\n' for k,v in preferences.items()))
         browser=subprocess.Popen([str(payload/'BharatXBrowser.exe'),'--no-remote',
-            '--profile',str(profile),'--headless','--marionette','--remote-allow-system-access','about:blank'])
+            '--profile',str(profile),'--headless','--marionette','--remote-allow-system-access','about:blank'],
+            env={**os.environ,'MOZ_REMOTE_ALLOW_SYSTEM_ACCESS':'1'})
         deadline=time.monotonic()+90
         while time.monotonic()<deadline:
             if browser.poll() is not None and browser.returncode != 0:raise RuntimeError(f'Browser exited before connection: {browser.returncode}')
